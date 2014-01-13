@@ -1,42 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Starterkit : Pygame starter kit" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Starterkit by alveyworld-dev</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Starterkit</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>Starterkit</h1>
+        <p>Pygame starter kit</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/alveyworld-dev/starterkit">View on GitHub</a>
+        <p class="view"><a href="https://github.com/alveyworld-dev/starterkit">View the Project on GitHub <small>alveyworld-dev/starterkit</small></a></p>
 
-          <h1 id="project_title">Starterkit</h1>
-          <h2 id="project_tagline">Pygame starter kit</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/alveyworld-dev/starterkit/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/alveyworld-dev/starterkit/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="starterkit" class="anchor" href="#starterkit"><span class="octicon octicon-link"></span></a>starterkit</h1>
-
-<p><em>A simple Pygame starter kit</em></p>
-
-<p><img src="http://i43.tinypic.com/2edwrdh.png" alt="Starter kit"></p>
+        <ul>
+          <li><a href="https://github.com/alveyworld-dev/starterkit/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/alveyworld-dev/starterkit/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/alveyworld-dev/starterkit">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p><img src="http://i44.tinypic.com/29zbxar.png" alt="Starter kit"></p>
 
 <h3>
 <a name="setting-up" class="anchor" href="#setting-up"><span class="octicon octicon-link"></span></a>Setting up</h3>
@@ -69,6 +61,60 @@ $ python main.py
 </ul>
 </li>
 </ul><h3>
+<a name="modifications" class="anchor" href="#modifications"><span class="octicon octicon-link"></span></a>Modifications</h3>
+
+<p>There are two main parts of the starter kit that you will want to start your
+modifications to.</p>
+
+<h4>
+<a name="game-loop" class="anchor" href="#game-loop"><span class="octicon octicon-link"></span></a>Game loop</h4>
+
+<p>The game loop is contained in <code>main.py</code>, and simply repeats <code>update</code> and <code>draw</code>
+ until exited.</p>
+
+<h4>
+<a name="update" class="anchor" href="#update"><span class="octicon octicon-link"></span></a>Update</h4>
+
+<p><code>update</code> is where you will want to do all your math and basic game logic.</p>
+
+<div class="highlight highlight-python"><pre><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="sd">"""</span>
+<span class="sd">    Update game world here</span>
+<span class="sd">    """</span>
+
+    <span class="c"># insert logic here</span>
+
+    <span class="k">return</span>
+</pre></div>
+
+<h4>
+<a name="draw" class="anchor" href="#draw"><span class="octicon octicon-link"></span></a>Draw</h4>
+
+<p><code>draw</code> is simply that - drawing the game world.  You should refrain from doing
+and logic code in <code>draw</code>, use it simply for drawing.</p>
+
+<div class="highlight highlight-python"><pre><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="sd">"""</span>
+<span class="sd">    Drawing logic</span>
+<span class="sd">    """</span>
+
+    <span class="c"># Fill the screen with black</span>
+    <span class="n">game</span><span class="o">.</span><span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">240</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mi">240</span><span class="p">))</span>
+
+    <span class="c"># insert logic here</span>
+
+    <span class="c"># Don't change these</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+
+    <span class="k">return</span>
+</pre></div>
+
+<p>Notice that there is some code already in the function: you shouldn't change
+these unless you know what you are doing.  Simply insert your own code after
+the comment "insert logic here".</p>
+
+<h3>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
 
 <pre><code>Copyright 2014 Joshua Beitler, Brandon Bench, Alveyworld
@@ -86,17 +132,12 @@ See the License for the specific language governing permissions and
 limitations under the License. 
 </code></pre>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Starterkit maintained by <a href="https://github.com/alveyworld-dev">alveyworld-dev</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/alveyworld-dev">alveyworld-dev</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-
+    <script src="javascripts/scale.fix.js"></script>
     
-
   </body>
 </html>
