@@ -4,24 +4,29 @@
 # 
 
 import sys
-import update
-import draw
 import pygame
-import game
+from source import game
+from source.update import update
+from source.draw import draw
 
 def main():
-	pygame.init()
+    """
+    Main game initilization code
+    """
 
-	game.screen = pygame.display.set_mode(game.window_size)
+    pygame.init()
 
-	while True:
-		for event in pygame.event.get():
-		    if event.type == pygame.QUIT: sys.exit()
+    game.screen = pygame.display.set_mode(game.window_size)
 
-		update.update()
-		draw.draw()
+    # Perform game loop
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT: sys.exit()
 
-	return
+        update()
+        draw()
+
+    return
 
 if __name__ == "__main__":
-	main()
+    main()
