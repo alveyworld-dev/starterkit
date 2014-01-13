@@ -15,15 +15,17 @@ def main():
     """
 
     pygame.init()
-
     game.screen = pygame.display.set_mode(game.window_size)
+    keys = []
 
     # Perform game loop
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT: sys.exit()
+            if event.type == pygame.KEYDOWN:
+                keys = pygame.key.getpressed()
 
-        update()
+        update(keys)
         draw()
 
     return

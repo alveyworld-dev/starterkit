@@ -8,7 +8,7 @@ def draw():
 	"""
 
 	# Fill the screen with black
-	game.screen.fill(40, 40, 40)
+	game.screen.fill((40, 40, 40))
 	
 	# insert logic here
 
