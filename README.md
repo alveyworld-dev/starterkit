@@ -1,7 +1,7 @@
 # starterkit
 _A simple Pygame starter kit_
 
-![Starter kit](http://i43.tinypic.com/2edwrdh.png)
+![Starter kit](http://i44.tinypic.com/29zbxar.png)
 
 ### Setting up
 ```
@@ -18,6 +18,51 @@ $ python main.py
     - `graphics.py` - Helpful graphics functions
     - `sprite.py` - Sprite class
     - `update.py` - Handles the `update()` function
+
+### Modifications
+There are two main parts of the starter kit that you will want to start your
+modifications to.
+
+#### Game loop
+The game loop is contained in `main.py`, and simply repeats `update` and `draw`
+ until exited.
+
+#### Update
+`update` is where you will want to do all your math and basic game logic.
+```python
+def update():
+    """
+    Update game world here
+    """
+
+    # insert logic here
+    
+    return
+```
+
+#### Draw
+`draw` is simply that - drawing the game world.  You should refrain from doing
+and logic code in `draw`, use it simply for drawing.
+```python
+def draw():
+    """
+    Drawing logic
+    """
+
+    # Fill the screen with black
+    game.screen.fill((240, 240, 240))
+    
+    # insert logic here
+
+    # Don't change these
+    pygame.display.update()
+    pygame.display.flip()
+
+    return
+```
+Notice that there is some code already in the function: you shouldn't change
+these unless you know what you are doing.  Simply insert your own code after
+the comment "insert logic here".
 
 ### License
 ```
