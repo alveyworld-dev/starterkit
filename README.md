@@ -1,1 +1,1 @@
-get to work fools
+We are going to make a game!
