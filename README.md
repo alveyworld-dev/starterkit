@@ -10,6 +10,9 @@ $ cd starterkit
 $ python main.py
 ```
 
+### Resources
+* [Intro to game design](https://docs.google.com/presentation/d/11oSHUDFR2WoMJXsoLWD1vtIr-BZaxDjECcIPFVro8iA/edit?usp=sharing)
+
 ### Overview
 * `resources/` - Any game resources: fonts, sprites, sounds, music, etc.
 * `source/` - Game source code
