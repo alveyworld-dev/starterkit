@@ -1,5 +1,5 @@
 # Game display
-screen = None
+screen      = None
 
 # Window size
 window_size = (600, 400)
