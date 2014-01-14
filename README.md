@@ -1,7 +1,7 @@
 # starterkit
 _A simple Pygame starter kit_
 
-![Starter kit](http://i44.tinypic.com/29zbxar.png)
+![Starter kit](http://i41.tinypic.com/24ctpgj.png)
 
 ### Setting up
 ```
@@ -66,6 +66,45 @@ def draw():
 Notice that there is some code already in the function: you shouldn't change
 these unless you know what you are doing.  Simply insert your own code after
 the comment "insert logic here".
+
+#### Init
+The `game.init` function (located in the `source/game.py` file) can be modified to contain game-wide initilization routines, and is run once before the game loop starts.  It is useful to put variable assignments, resource loading, and any other setup that might need doing here.
+```python
+...
+my_var = 0
+
+def init():
+    game.sprites["player"] = Sprite("player.png")
+    my_var = game.sprites["player"].rect
+    return
+```
+
+#### Using sprites
+Using the `Sprite` class, it is possible to easily abstract the process of loading images, storing position, and drawing.
+
+A sprite can be created by importing `sprite.Sprite` and providing it the filename of the image that will represent it.
+```python
+from sprite import Sprite
+
+my_sprite = Sprite("my_image.png")
+```
+The `Sprite` class contains several useful properties which can be manipulated at runtime:
+* `Sprite.rect` - Rectangle describing sprite image, useful for collision detection
+* `Sprite.image` - Texture representing the sprite
+Sprites can be draw by invoking the `Sprite.draw` function.
+```
+my_sprite = Sprite("my_image.png")
+my_sprite.draw()
+```
+
+Inside `game.py` exists a dictionary called `sprites`, which can be used to store and access sprites throughout the game.
+```python
+import game
+from sprite import Sprite
+
+my_sprite = Sprite("my_image.png")
+game.sprites["player"] = my_sprite
+```
 
 ### License
 ```

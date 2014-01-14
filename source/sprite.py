@@ -1,17 +1,11 @@
 import pygame
-import graphics
+import game
 
-class Sprite:
-    def __init__(self, pos, sz, clr):
-        self.position = pos
-        self.size = sz
-        self.color = clr
-
+class Sprite():
+    def __init__(self, texture):
+        self.image = pygame.image.load(texture)
+        self.rect = self.image.get_rect()
         return
 
     def draw(self):
-        graphics.draw_rect(self.size, self.color, self.position)
-        return
-
-    def load(self, *filename):
-        return
+        game.screen.blit(self.image, self.rect)
