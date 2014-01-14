@@ -15,7 +15,7 @@ def main():
     """
 
     pygame.init()
-    game.screen = pygame.display.set_mode(game.window_size)
+    game.screen = pygame.display.set_mode(game.window_size, pygame.DOUBLEBUF)
     keys = []
 
     # Perform game loop

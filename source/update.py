@@ -2,10 +2,10 @@ import pygame
 import game
 
 def update(keys):
-	"""
-	Update game world here
-	"""
+    """
+    Update game world here
+    """
 
-	# insert logic here
+    # insert logic here
 
-	return
+    return

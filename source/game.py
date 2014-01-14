@@ -1,3 +1,5 @@
+from sprite import Sprite
+
 # Game display
 screen      = None
 
