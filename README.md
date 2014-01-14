@@ -12,6 +12,9 @@ $ python main.py
 
 ### Resources
 * [Intro to game design](https://docs.google.com/presentation/d/11oSHUDFR2WoMJXsoLWD1vtIr-BZaxDjECcIPFVro8iA/edit?usp=sharing)
+* [Using sprites](https://github.com/alveyworld-dev/starterkit/wiki/Sprites)
+* [Setting a background](https://github.com/alveyworld-dev/starterkit/wiki/Background)
+* [Audio](https://github.com/alveyworld-dev/starterkit/wiki/Audio)
 
 ### Overview
 * `resources/` - Any game resources: fonts, sprites, sounds, music, etc.
