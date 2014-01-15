@@ -2,6 +2,8 @@
 # Pygame Starter Kit
 # Copyright 2014, AlveyLabs Inc
 # 
+# Version 0.2.2
+# 
 
 import sys
 import pygame
