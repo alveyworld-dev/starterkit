@@ -26,7 +26,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT: sys.exit()
             if event.type == pygame.KEYDOWN:
-                keys = pygame.key.getpressed()
+                keys = pygame.key.get_pressed()
 
         update(keys)
         draw()
