@@ -1,5 +1,4 @@
 # starterkit
-_A simple Pygame starter kit_
 
 ![Starter kit](http://i43.tinypic.com/dztnpe.png)
 
