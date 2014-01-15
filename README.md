@@ -1,7 +1,7 @@
 # starterkit
 _A simple Pygame starter kit_
 
-![Starter kit](http://i41.tinypic.com/24ctpgj.png)
+![Starter kit](http://i43.tinypic.com/dztnpe.png)
 
 ### Setting up
 ```
