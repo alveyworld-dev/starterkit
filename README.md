@@ -85,18 +85,18 @@ def init():
 #### Using sprites
 Using the `Sprite` class, it is possible to easily abstract the process of loading images, storing position, and drawing.
 
-A sprite can be created by importing `sprite.Sprite` and providing it the filename of the image that will represent it.
+A sprite can be created by importing `sprite.Sprite` and providing it the filename of the image that will represent it and a position (as as tuple)
 ```python
 from sprite import Sprite
 
-my_sprite = Sprite("my_image.png")
+my_sprite = Sprite("my_image.png", (50, 50))
 ```
 The `Sprite` class contains several useful properties which can be manipulated at runtime:
 * `Sprite.rect` - Rectangle describing sprite image, useful for collision detection
 * `Sprite.image` - Texture representing the sprite
 Sprites can be draw by invoking the `Sprite.draw` function.
 ```
-my_sprite = Sprite("my_image.png")
+my_sprite = Sprite("my_image.png", (50, 50))
 my_sprite.draw()
 ```
 
@@ -107,6 +107,18 @@ from sprite import Sprite
 
 my_sprite = Sprite("my_image.png")
 game.sprites["player"] = my_sprite
+```
+
+#### Resources
+When providing arguments to functions or classes that allow filenames to be taken (for example, the `sprite` class),
+the files should be placed in the `resources/` folder.  When referencing your file, it is only nessisary to name
+the file itself, not the full path.  For example:
+```python
+my_sprite = Sprite("test.png", (50, 50))
+```
+becomes
+```python
+my_sprite = Sprite("resources/test.png", (50, 50))
 ```
 
 ### License
