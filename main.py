@@ -18,7 +18,7 @@ def main():
 
     pygame.init()
     game.screen = pygame.display.set_mode(game.window_size, pygame.DOUBLEBUF)
-    keys = []
+    keys = set()
 
     # Set up game
     game.init()
@@ -27,8 +27,8 @@ def main():
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT: sys.exit()
-            if event.type == pygame.KEYDOWN:
-                keys = pygame.key.get_pressed()
+            if event.type == pygame.KEYDOWN: keys.add(event.key)
+            if event.type == pygame.KEYUP: keys.discard(event.key)
 
         update(keys)
         draw()

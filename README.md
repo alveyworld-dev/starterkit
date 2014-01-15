@@ -120,6 +120,13 @@ becomes
 my_sprite = Sprite("resources/test.png", (50, 50))
 ```
 
+#### Keyboard input
+You can check for keyboard input in the `update` function like so:
+```python
+for key in keys:
+    if key == pygame.K_LEFT: # do whatever
+```
+
 ### License
 ```
 Copyright 2014 Joshua Beitler, Brandon Bench, Alveyworld
