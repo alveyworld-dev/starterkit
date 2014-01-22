@@ -36,7 +36,7 @@ def init():
 
 def main():
     """
-    Main game initilization code
+    Main game initialization code
     """
 
     # Set up pygame
