@@ -1,6 +1,5 @@
 import pygame
 import game
-from keys import key_down
 
 def update(keys):
     """
