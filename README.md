@@ -93,8 +93,9 @@ my_sprite = Sprite("my_image.png", (50, 50))
 The `Sprite` class contains several useful properties which can be manipulated at runtime:
 * `Sprite.rect` - Rectangle describing sprite image, useful for collision detection
 * `Sprite.image` - Texture representing the sprite
+
 Sprites can be draw by invoking the `Sprite.draw` function.
-```
+```python
 my_sprite = Sprite("my_image.png", (50, 50))
 my_sprite.draw()
 ```
