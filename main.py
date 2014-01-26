@@ -2,11 +2,10 @@
 # Pygame Starter Kit
 # Copyright 2014, AlveyLabs Inc
 # 
-# Version 0.2.2
+# Version 0.2.3
 # 
 
-import sys
-import pygame
+import sys, pygame
 from source import game
 from source.update import update
 from source.draw import draw
@@ -16,6 +15,7 @@ def main():
     Main game initilization code
     """
 
+    # Set up pygame
     pygame.init()
     game.screen = pygame.display.set_mode(game.window_size, pygame.DOUBLEBUF)
     keys = set()
@@ -35,5 +35,6 @@ def main():
 
     return
 
+# Ignore this, it simply calls the main() function
 if __name__ == "__main__":
     main()
