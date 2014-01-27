@@ -18,6 +18,9 @@ def init():
     resources
     """
 
+    # Don't touch this unless you want to break everything
+    game.main_font   = pygame.font.Font("resources/main_font.ttf", 18)
+
     # Example:
     # game.my_sprite = Sprite("filename.png", (50, 50))
     
@@ -53,9 +56,10 @@ def main():
             if event.type == pygame.KEYUP: keys.discard(event.key)
             if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE: sys.exit()
 
-        update(keys)
-        draw()
+        update(keys)        # update.py
+        draw()              # draw.py
         
+        # Simply flips the display for drawing
         pygame.display.update()
         pygame.display.flip()
 

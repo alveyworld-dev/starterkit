@@ -14,4 +14,6 @@ def draw():
     # Drawing a sprite called my_sprite
     # my_sprite.draw()
 
+    graphics.draw_text("Hello", (255, 255, 255), (50, 50))
+
     return
